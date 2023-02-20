@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- @import link.kit -->
+</head>
+
+<body>
+    <!-- @import navContact.kit -->
+
+
+    <section class="contact section-padding">
+        <div class="wrapper">
+            <h2 class="section-heading">Masz pytania?</h2>
+            <p class="contact text">Skontaktuj się z nami - wypełnij formularz kontaktowy</p>
+            <form class="contact__form">
+                <div class="contact__box">
+                    <div class="contact__form-box">
+                        <label for="name">imię i nazwisko:</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="email">adres e-mail</label>
+                        <input type="text" id="email">
+                    </div>
+                </div>
+                <div class="contact__form-box">
+                    <label for="msg">Wiadomość:</label>
+                    <textarea id="msg" cols="30" rows="10"></textarea>
+                    <button type="submit" class="contact__form-btn">Wyślij</button>
+                </div>
+                <span class="info__error">Wypełnij poprawnie formularz!</span>
+                <div class="info">
+                    <p class="info__label">Informacje kontaktowe</p>
+                    <div class="info__content">
+                        <div class="info__content-box">
+                            <p>ul. Samniewiem 89 <br>
+                                66-333 Kalisz <br>
+                                <span class="info__content-bold">NIP:</span>
+                                333-333-333 <br>
+                                <span class="info__content-bold">REGON:</span>
+                                333-333-33-33
+                            </p>
+                        </div>
+                        <div class="info__content-box">
+                            <span class="info__content-bold"> <img src="/dist/img/icons/smartphone.svg" alt=""> tel.
+                                komórkowy:</span>
+                            <p>+33 333 333 333</p>
+                            <span class="info__content-bold"><img src="/dist/img/icons/phone.svg" alt=""> tel/fax:</span>
+                            <p>+48 (62) 333-333-333</p>
+                        </div>
+                        <div class="info__content-box">
+                            <span class="info__content-bold"> <img src="/dist/img/icons/mail.svg" alt=""> E-mail:</span>
+                            <p>niewiemjaki@gmail.com</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <p class="info__text">tu nas znajdziesz</p>
+                <div id='printoutPanel'></div>
+                <div id='myMap'></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- @import footer.kit -->
+    <script
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AoX8T4s5iW8Yg3N9-MYBcPrE5yXt-PyGybeq58awHUaaQ2IpGPsNv_mkFDFPNzoj'
+        type='text/javascript'></script>
+    <script src="/dist/js/form.min.js"></script>
+    <script src="/dist/js/map.min.js"></script>
+    <script src="/dist/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.main {
+  &__card {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+
+    &-box {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    &-title {
+      padding: 1em 0 1em 0;
+      font-size: 2.5rem;
+    }
+    &-text {
+      font-size: 2rem;
+      word-spacing: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    &__card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &-box {
+        padding-left: 2em;
+      }
+      &-title {
+        padding: 0 0 0.5em 0;
+      }
+    }
+
+    img {
+      max-width: 550px;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/b4325cf263.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/dist/css/main.min.css">
+</head>
+
+<body>
+    <button class="burger-btn">
+    <div class="burger-btn__box">
+        <div class="burger-btn__bars "></div>
+    </div>
+</button>
+
+
+<nav class="nav nav__mobile ">
+    <div class="nav__mobile-links">
+        <a href="/index.html" class="nav__mobile-link">Home</a>
+        <a href="/index.html" class="nav__mobile-link">O nas</a>
+        <a href="/index.html" class="nav__mobile-link">Oferta</a>
+        <a href="#" class="nav__mobile-link">Kontakt</a>
+    </div>
+</nav>
+
+
+<nav class="nav wrapper">
+    <a href="/index.html" class="nav__logo"><i class="fa-solid fa-tree"></i>Forest</a>
+    <div class="nav__links">
+        <a href="/index.html" class="nav__link">Home</a>
+        <a href="/index.html" class="nav__link">O nas</a>
+        <a href="/index.html" class="nav__link">Oferta</a>
+        <a href="#" class="nav__link">Kontakt</a>
+    </div>
+</nav>
+
+
+    <section class="contact section-padding">
+        <div class="wrapper">
+            <h2 class="section-heading">Masz pytania?</h2>
+            <p class="contact text">Skontaktuj się z nami - wypełnij formularz kontaktowy</p>
+            <form class="contact__form">
+                <div class="contact__box">
+                    <div class="contact__form-box">
+                        <label for="name">imię i nazwisko:</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="email">adres e-mail</label>
+                        <input type="text" id="email">
+                    </div>
+                </div>
+                <div class="contact__form-box">
+                    <label for="msg">Wiadomość:</label>
+                    <textarea id="msg" cols="30" rows="10"></textarea>
+                    <button type="submit" class="contact__form-btn">Wyślij</button>
+                </div>
+                <span class="info__error">Wypełnij poprawnie formularz!</span>
+                <div class="info">
+                    <p class="info__label">Informacje kontaktowe</p>
+                    <div class="info__content">
+                        <div class="info__content-box">
+                            <p>ul. Samniewiem 89 <br>
+                                66-333 Kalisz <br>
+                                <span class="info__content-bold">NIP:</span>
+                                333-333-333 <br>
+                                <span class="info__content-bold">REGON:</span>
+                                333-333-33-33
+                            </p>
+                        </div>
+                        <div class="info__content-box">
+                            <span class="info__content-bold"> <img src="/dist/img/icons/smartphone.svg" alt=""> tel.
+                                komórkowy:</span>
+                            <p>+33 333 333 333</p>
+                            <span class="info__content-bold"><img src="/dist/img/icons/phone.svg" alt=""> tel/fax:</span>
+                            <p>+48 (62) 333-333-333</p>
+                        </div>
+                        <div class="info__content-box">
+                            <span class="info__content-bold"> <img src="/dist/img/icons/mail.svg" alt=""> E-mail:</span>
+                            <p>niewiemjaki@gmail.com</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <p class="info__text">tu nas znajdziesz</p>
+                <div id='printoutPanel'></div>
+                <div id='myMap'></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="wrapper ">
+
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <p class="footer__box-logo"><i class="fa-solid fa-tree"></i>Forest</p>
+            </div>
+            <div class="footer__box footer__box-aboutus">
+                <p class="footer__box-title">O nas</p>
+                <a href="">Historia</a>
+                <a href="">Parki</a>
+                <a href="">Opinie</a>
+            </div>
+            <div class="footer__box footer__box-firm">
+                <p class="footer__box-title">Nasza firma</p>
+                <a href="">Praca</a>
+                <a href="">Kadry</a>
+                <a href="">Zarząd</a>
+            </div>
+            <div class="footer__box footer__box-documents">
+                <p class="footer__box-title">Dokumenty</p>
+                <a href="">Wnioski</a>
+                <a href="">Rezerwacje</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer__bottom">
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Forest Group Company Ltd.</p>
+    </div>
+</footer>
+    <script
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AoX8T4s5iW8Yg3N9-MYBcPrE5yXt-PyGybeq58awHUaaQ2IpGPsNv_mkFDFPNzoj'
+        type='text/javascript'></script>
+    <script src="/dist/js/form.min.js"></script>
+    <script src="/dist/js/map.min.js"></script>
+    <script src="/dist/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as *;
+
+.section-heading {
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: $dark;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.section-padding {
+  padding: 2em 0;
+}
+
+.text {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1em;
+}
+
+@media (min-width: 576px) {
+  .section-padding {
+    padding: 4em 0;
+  }
+  .section-heading {
+    font-size: 4rem;
+  }
+}

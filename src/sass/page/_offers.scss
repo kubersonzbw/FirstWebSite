@@ -1,0 +1,179 @@
+@use "../abstracts/colors" as *;
+.offers {
+  overflow: hidden;
+  &__text {
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__info {
+    display: none;
+    position: absolute;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    cursor: pointer;
+
+    &-shadow {
+      padding: 10px;
+      font-weight: 500;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      color: white;
+      background: rgb(0, 0, 0);
+      border-radius: 8px;
+      clip-path: circle(0% at 50% -5%);
+      transition: clip-path 0.5s;
+    }
+    &:hover ~ &-shadow {
+      clip-path: circle(30% at 50% -5%);
+    }
+  }
+
+  &__readmore {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    &-text {
+      color: $dark;
+      text-decoration: none;
+      border: 2px solid $dark;
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      margin-top: 1em;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: $dark;
+        color: $white;
+      }
+    }
+  }
+  &__cards {
+    padding-top: 3em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+  &__card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.11);
+    border-radius: 8px;
+    margin-bottom: 2em;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    &-title {
+      font-weight: 500;
+      padding-top: 0.5em;
+      font-size: 2.8rem;
+    }
+    &-price {
+      padding-top: 0.2em;
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+    &-option {
+      padding: 0.4em;
+      font-size: 1.2rem;
+      img {
+        width: 1.4rem;
+      }
+      &.outside {
+        color: rgba(0, 0, 0, 0.329);
+      }
+    }
+
+    &-btn {
+      margin: 0.5em;
+      padding: 1em 2.5em;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      background: none;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.11);
+      cursor: pointer;
+      transition: background 0.3s;
+      &:hover {
+        background: $green;
+        transform: scale(1.2);
+        box-shadow: 5px 5px 10px 1px rgba(5, 168, 32, 0.329);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .offers {
+    &__card {
+      width: 300px;
+      height: 400px;
+      &-option {
+        font-size: 1.7rem;
+      }
+      &-title {
+        padding-top: 1em;
+      }
+      &-price {
+        font-size: 6.5rem;
+      }
+    }
+    &__readmore {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .offers {
+    &__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+    &__card {
+      &-premium {
+        grid-column: 1/3;
+        grid-row: 2;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .offers {
+    &__info {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .offers {
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__card {
+      &-premium {
+        grid-column: 3/4;
+        grid-row: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../abstracts/colors" as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &__img {
+    position: relative;
+    background-image: url("/dist/img/jungle-g0e404cb49_640.jpg");
+    height: 400px;
+    background-position: 100% 70%;
+    background-size: cover;
+    z-index: -1;
+  }
+  &__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    justify-content: center;
+    color: $white;
+    z-index: 100;
+    &-title {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 2.5rem;
+      font-weight: 200;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .header {
+    &__text {
+      &-title {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__img {
+      background-image: url("/dist/img/jungle-g52d90c30e_1920.jpg");
+    }
+  }
+}
